@@ -8,6 +8,11 @@ const fieldClass =
 export function PartnershipForm() {
   const [state, handleSubmit] = useForm('xbgjkrzp')
 
+  const formErrors = state.errors?.getFormErrors() ?? []
+  const adErrors = state.errors?.getFieldErrors('ad') ?? []
+  const emailErrors = state.errors?.getFieldErrors('email') ?? []
+  const messageErrors = state.errors?.getFieldErrors('message') ?? []
+
   return (
     <section
       id="iletisim"
@@ -58,7 +63,12 @@ export function PartnershipForm() {
               placeholder="Örn. Ada Kaya"
               className={fieldClass}
             />
-            <ValidationError field="email" errors={state.errors} className="mt-2 block text-sm font-semibold text-kred" />
+            {adErrors.length > 0 && (
+              <p className="mt-2 block text-sm font-semibold text-kred" aria-live="polite">
+                {adErrors[0].message}
+              </p>
+            )}
+            <ValidationError field="ad" errors={state.errors} className="mt-2 block text-sm font-semibold text-kred" />
           </div>
           <div>
             <label
@@ -75,6 +85,12 @@ export function PartnershipForm() {
               placeholder="ornek@eposta.com"
               className={fieldClass}
             />
+            {emailErrors.length > 0 && (
+              <p className="mt-2 block text-sm font-semibold text-kred" aria-live="polite">
+                {emailErrors[0].message}
+              </p>
+            )}
+            <ValidationError field="email" errors={state.errors} className="mt-2 block text-sm font-semibold text-kred" />
           </div>
         </div>
 
@@ -93,6 +109,11 @@ export function PartnershipForm() {
             placeholder="Bize projenizden bahsedin..."
             className={`${fieldClass} resize-none`}
           />
+          {messageErrors.length > 0 && (
+            <p className="mt-2 block text-sm font-semibold text-kred" aria-live="polite">
+              {messageErrors[0].message}
+            </p>
+          )}
           <ValidationError field="message" errors={state.errors} className="mt-2 block text-sm font-semibold text-kred" />
         </div>
 
@@ -110,7 +131,7 @@ export function PartnershipForm() {
           </p>
         )}
 
-        {state.errors && state.errors.length > 0 && !state.errors.some((item) => item.field) && (
+        {formErrors.length > 0 && (
           <p className="mt-4 text-center text-sm font-semibold text-kred" aria-live="assertive">
             Form gönderilemedi. Lütfen bilgileri kontrol edip tekrar deneyin.
           </p>
