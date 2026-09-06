@@ -53,7 +53,8 @@ const teamMembers = [
     role: 'SYSTEMS & HARDWARE LEAD',
     handle: '@tenguu_cos',
     instagram: 'https://www.instagram.com/tenguu_cos/',
-    photo: '/images/yakupparlak.jpg',
+    photo: '/images/yakupinsan.jpg',
+    photoPosition: '50% 35%',
     accent: 'from-kblue to-kpurple',
   },
   {
