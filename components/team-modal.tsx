@@ -107,7 +107,7 @@ export function TeamModal() {
 
       {open && (
         <div
-          className="fixed inset-0 z-[60] grid min-h-dvh place-items-center overflow-y-auto bg-black/75 px-4 py-8 backdrop-blur-sm"
+          className="fixed inset-0 z-[60] grid min-h-dvh place-items-center overflow-y-auto bg-black/80 px-4 py-8"
           role="dialog"
           aria-modal="true"
           aria-labelledby="team-modal-title"
@@ -146,7 +146,7 @@ export function TeamModal() {
             </a>
 
             <div className="grid gap-4 md:grid-cols-3">
-              {teamMembers.map((member) => (
+              {teamMembers.map((member, index) => (
                 <article key={member.name} className="group overflow-hidden rounded-2xl border-[3px] border-black bg-white/10 shadow-[4px_4px_0_#000] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[6px_7px_0_#000]">
                   <div className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-br ${member.accent}`}>
                     {member.photo ? (
@@ -155,7 +155,8 @@ export function TeamModal() {
                         alt={`${member.name} ekip üyesi fotoğrafı`}
                         fill
                         sizes="(min-width: 768px) 30vw, 90vw"
-                        quality={95}
+                        quality={75}
+                        loading={index === 0 ? 'eager' : 'lazy'}
                         className="object-cover"
                         style={{ objectPosition: member.photoPosition ?? '50% 50%' }}
                       />
