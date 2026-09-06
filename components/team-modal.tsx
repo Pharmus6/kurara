@@ -133,7 +133,7 @@ export function TeamModal() {
             </div>
 
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdHN3YatLw71TFvTBIqsgyeZEE_HwI_hpODSRzMV61sX0K5Dg/viewform?usp=publish-editor"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScQXmDbKUqxfXw5n2KqT8avqSuQCMm_uJvNsnSELfyG_rZZ8Q/viewform?usp=dialog"
               target="_blank"
               rel="noreferrer"
               className="mb-5 inline-flex items-center gap-2 rounded-lg border-2 border-black bg-kyellow px-3 py-2 text-xs font-black uppercase tracking-[0.06em] text-ink shadow-[3px_3px_0_#000] transition-transform hover:-translate-y-0.5 active:translate-y-0.5 sm:mb-6"
