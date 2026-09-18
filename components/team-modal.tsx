@@ -51,9 +51,10 @@ const teamMembers = [
   {
     name: 'Fatma',
     role: 'ART DIRECTOR & STYLIST',
-    handle: '@fantacos_',
-    instagram: 'https://www.instagram.com/fantacos_/',
+    handle: '@allxorsz_',
+    instagram: 'https://www.instagram.com/allxorsz_/',
     photo: '/images/fatma.jpg',
+    photoPosition: '60% 50%',
     accent: 'from-kyellow to-kpink',
   },
   {
