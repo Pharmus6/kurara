@@ -49,6 +49,14 @@ const teamMembers = [
     accent: 'from-kyellow to-kred',
   },
   {
+    name: 'Fatma',
+    role: 'ART DIRECTOR & STYLIST',
+    handle: '@fantacos_',
+    instagram: 'https://www.instagram.com/fantacos_/',
+    photo: '/images/fatma.jpg',
+    accent: 'from-kyellow to-kpink',
+  },
+  {
     name: 'Yakup Parlak',
     role: 'SYSTEMS & HARDWARE LEAD',
     handle: '@tenguu_cos',
