@@ -62,9 +62,19 @@ const teamMembers = [
     role: 'SYSTEMS & HARDWARE LEAD',
     handle: '@tenguu_cos',
     instagram: 'https://www.instagram.com/tenguu_cos/',
+    linkedin: 'https://www.linkedin.com/in/yakup-parlak-a24a563b3/',
     photo: '/images/yakupinsan.jpg',
     photoPosition: '50% 35%',
     accent: 'from-kblue to-kpurple',
+  },
+  {
+    name: 'Efe Günlü',
+    role: 'CULTURE & EVENT SPECIALIST',
+    handle: '@shimimi.cos',
+    instagram: 'https://www.instagram.com/shimimi.cos/',
+    linkedin: 'https://www.linkedin.com/in/efe-g%C3%BCnl%C3%BC-404b8a414/',
+    photo: '/images/efe günlü.jpg',
+    accent: 'from-kpink to-kpurple',
   },
   {
     name: 'Mehmet Efe Gençer',
@@ -116,7 +126,7 @@ export function TeamModal() {
 
       {open && (
         <div
-          className="fixed inset-0 z-[60] grid min-h-dvh place-items-center overflow-y-auto bg-black/80 px-4 py-8"
+          className="fixed inset-0 z-[60] grid min-h-dvh place-items-center overflow-y-auto bg-black/75 px-4 py-8 backdrop-blur-sm"
           role="dialog"
           aria-modal="true"
           aria-labelledby="team-modal-title"
@@ -124,8 +134,8 @@ export function TeamModal() {
             if (event.target === event.currentTarget) setOpen(false)
           }}
         >
-          <div className="relative w-full max-w-5xl rounded-[2rem] border-[3px] border-black bg-[#191633] p-4 shadow-[8px_8px_0_#000] sm:p-7">
-            <div className="mb-5 flex items-start justify-between gap-4 sm:mb-7">
+          <div className="relative w-full max-w-7xl rounded-[2rem] border border-white/25 bg-[linear-gradient(135deg,rgba(24,14,52,0.96),rgba(68,27,112,0.76)_28%,rgba(122,29,91,0.62)_52%,rgba(22,39,75,0.86)_78%,rgba(10,12,28,0.98))] p-4 shadow-[8px_8px_0_#000,inset_0_1px_0_rgba(255,255,255,0.24)] backdrop-blur-2xl sm:p-7 lg:p-8">
+            <div className="mb-5 flex items-start justify-between gap-4 border-b-2 border-white/15 pb-5 sm:mb-7 sm:pb-7">
               <div>
                 <span className="font-graff text-sm text-kyellow text-stroke-black sm:text-base">KURARA EKIBI</span>
                 <h2 id="team-modal-title" className="font-graff text-3xl leading-none text-white text-stroke-black sm:text-5xl">
@@ -154,16 +164,16 @@ export function TeamModal() {
               EKIBE KATIL
             </a>
 
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
               {teamMembers.map((member, index) => (
-                <article key={member.name} className="group overflow-hidden rounded-2xl border-[3px] border-black bg-white/10 shadow-[4px_4px_0_#000] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[6px_7px_0_#000]">
+                <article key={member.name} className="group overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-b from-white/[0.16] to-white/[0.05] shadow-[4px_4px_0_#000,inset_0_1px_0_rgba(255,255,255,0.2)] backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1 hover:border-white/40 hover:shadow-[6px_7px_0_#000,inset_0_1px_0_rgba(255,255,255,0.3)]">
                   <div className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-br ${member.accent}`}>
                     {member.photo ? (
                       <Image
                         src={member.photo}
                         alt={`${member.name} ekip üyesi fotoğrafı`}
                         fill
-                        sizes="(min-width: 768px) 30vw, 90vw"
+                        sizes="(min-width: 1024px) 22vw, 90vw"
                         quality={75}
                         loading={index === 0 ? 'eager' : 'lazy'}
                         className="object-cover"
@@ -180,8 +190,8 @@ export function TeamModal() {
                   </div>
                   <div className="p-4">
                     <h3 className="font-graff text-xl text-white text-stroke-black">{member.name}</h3>
-                    <p className="mt-2 inline-flex -rotate-2 items-center border-2 border-black bg-gradient-to-r from-kred via-kpink to-kpurple px-2.5 py-1 text-[0.65rem] font-black uppercase tracking-[0.08em] text-white shadow-[3px_3px_0_#000]">
-                      <span className="mr-1.5 h-1.5 w-1.5 rounded-full bg-kyellow shadow-[1px_1px_0_#000]" />
+                    <p className="mt-2 inline-flex max-w-full -rotate-2 items-center gap-2 rounded-md border-2 border-black/80 bg-gradient-to-r from-kred via-kpink to-kpurple px-2.5 py-1.5 text-[0.6rem] font-black uppercase leading-tight tracking-[0.07em] text-white shadow-[3px_3px_0_#000,inset_0_1px_0_rgba(255,255,255,0.35)] sm:text-[0.65rem]">
+                      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-kyellow shadow-[0_0_8px_rgba(255,218,59,0.85)]" />
                       {member.role}
                     </p>
                     <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
