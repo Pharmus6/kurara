@@ -134,7 +134,7 @@ export function TeamModal() {
             if (event.target === event.currentTarget) setOpen(false)
           }}
         >
-          <div className="relative max-h-[calc(100dvh-4rem)] w-full max-w-7xl overflow-y-auto rounded-[2rem] border border-white/25 bg-[linear-gradient(135deg,rgba(24,14,52,0.98),rgba(68,27,112,0.92)_28%,rgba(122,29,91,0.88)_52%,rgba(22,39,75,0.94)_78%,rgba(10,12,28,0.99))] p-4 shadow-[8px_8px_0_#000,inset_0_1px_0_rgba(255,255,255,0.24)] sm:p-7 lg:p-8">
+          <div className="relative w-full max-w-7xl rounded-[2rem] border border-white/25 bg-[linear-gradient(135deg,rgba(24,14,52,0.98),rgba(68,27,112,0.92)_28%,rgba(122,29,91,0.88)_52%,rgba(22,39,75,0.94)_78%,rgba(10,12,28,0.99))] p-4 shadow-[8px_8px_0_#000,inset_0_1px_0_rgba(255,255,255,0.24)] sm:p-7 lg:p-8">
             <div className="mb-5 flex items-start justify-between gap-4 border-b-2 border-white/15 pb-5 sm:mb-7 sm:pb-7">
               <div>
                 <span className="font-graff text-sm text-kyellow text-stroke-black sm:text-base">KURARA EKIBI</span>
