@@ -134,7 +134,7 @@ export function TeamModal() {
             if (event.target === event.currentTarget) setOpen(false)
           }}
         >
-          <div className="relative w-full max-w-7xl rounded-[2rem] border border-white/25 bg-[linear-gradient(135deg,rgba(24,14,52,0.96),rgba(68,27,112,0.76)_28%,rgba(122,29,91,0.62)_52%,rgba(22,39,75,0.86)_78%,rgba(10,12,28,0.98))] p-4 shadow-[8px_8px_0_#000,inset_0_1px_0_rgba(255,255,255,0.24)] backdrop-blur-2xl sm:p-7 lg:p-8">
+          <div className="relative max-h-[calc(100dvh-4rem)] w-full max-w-7xl overflow-y-auto rounded-[2rem] border border-white/25 bg-[linear-gradient(135deg,rgba(24,14,52,0.98),rgba(68,27,112,0.92)_28%,rgba(122,29,91,0.88)_52%,rgba(22,39,75,0.94)_78%,rgba(10,12,28,0.99))] p-4 shadow-[8px_8px_0_#000,inset_0_1px_0_rgba(255,255,255,0.24)] sm:p-7 lg:p-8">
             <div className="mb-5 flex items-start justify-between gap-4 border-b-2 border-white/15 pb-5 sm:mb-7 sm:pb-7">
               <div>
                 <span className="font-graff text-sm text-kyellow text-stroke-black sm:text-base">KURARA EKIBI</span>
@@ -166,7 +166,7 @@ export function TeamModal() {
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
               {teamMembers.map((member, index) => (
-                <article key={member.name} className="group overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-b from-white/[0.16] to-white/[0.05] shadow-[4px_4px_0_#000,inset_0_1px_0_rgba(255,255,255,0.2)] backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1 hover:border-white/40 hover:shadow-[6px_7px_0_#000,inset_0_1px_0_rgba(255,255,255,0.3)]">
+                <article key={member.name} className="group overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-b from-white/[0.16] to-white/[0.05] shadow-[4px_4px_0_#000,inset_0_1px_0_rgba(255,255,255,0.2)] transition-transform duration-300 hover:-translate-y-1 hover:border-white/40 hover:shadow-[6px_7px_0_#000,inset_0_1px_0_rgba(255,255,255,0.3)]">
                   <div className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-br ${member.accent}`}>
                     {member.photo ? (
                       <Image
@@ -174,8 +174,9 @@ export function TeamModal() {
                         alt={`${member.name} ekip üyesi fotoğrafı`}
                         fill
                         sizes="(min-width: 1024px) 22vw, 90vw"
-                        quality={75}
+                        quality={60}
                         loading={index === 0 ? 'eager' : 'lazy'}
+                        decoding="async"
                         className="object-cover"
                         style={{ objectPosition: member.photoPosition ?? '50% 50%' }}
                       />
