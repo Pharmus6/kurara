@@ -85,6 +85,14 @@ const teamMembers = [
     photoPosition: '50% 28%',
     accent: 'from-kpink to-kred',
   },
+  {
+    name: 'Arda Abanoz',
+    role: 'VOICEOVER ARTIST & EVENT HOST',
+    handle: '@crea_cos',
+    instagram: 'https://www.instagram.com/crea_cos/',
+    photo: '/images/WhatsApp Image 2026-09-29 at 3.25.40 PM.jpeg',
+    accent: 'from-kblue to-kpink',
+  },
 ]
 
 export function TeamModal() {
