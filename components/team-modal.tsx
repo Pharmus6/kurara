@@ -77,15 +77,6 @@ const teamMembers = [
     accent: 'from-kpink to-kpurple',
   },
   {
-    name: 'Mehmet Efe Gençer',
-    role: 'VIDEO EDITOR & MOTION DESIGNER',
-    handle: '@mehmetefegencr',
-    instagram: 'https://www.instagram.com/mehmetefegencr/',
-    photo: '/images/mehmetefegençer.webp',
-    photoPosition: '50% 28%',
-    accent: 'from-kpink to-kred',
-  },
-  {
     name: 'Arda Abanoz',
     role: 'VOICEOVER ARTIST & EVENT HOST',
     handle: '@crea_cos',
