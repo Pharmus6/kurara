@@ -43,8 +43,8 @@ const teamMembers = [
   {
     name: 'Ezgi Ela Öztem',
     role: 'ART DIRECTOR',
-    handle: '@tuylukek',
-    instagram: 'https://www.instagram.com/tuylukek/',
+    handle: '@propanyak',
+    instagram: 'https://www.instagram.com/propanyak/',
     photo: '/images/ezgi.png',
     accent: 'from-kyellow to-kred',
   },
