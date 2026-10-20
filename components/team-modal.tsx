@@ -33,11 +33,11 @@ const teamMembers = [
     accent: 'from-kred to-kpink',
   },
   {
-    name: 'Deniz Akdeniz',
-    role: 'COMMUNITY & OPERATIONS MANAGER',
-    handle: '@denizakdeniz28',
-    instagram: 'https://www.instagram.com/denizakdeniz28/',
-    photo: '/images/denizkadeniz.jpeg',
+    name: 'Taha Seçgin',
+    role: 'CREATIVE MEDIA DIRECTOR',
+    handle: '@talac.cos',
+    instagram: 'https://www.instagram.com/talac.cos/',
+    photo: '/images/taha.png',
     accent: 'from-kpurple to-kblue',
   },
   {
